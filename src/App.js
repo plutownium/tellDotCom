@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
-import logo from "./logo.svg";
+import getTodos from "./_helper/_helper";
+import formatTodoData from "./util/utility";
+
 import "./App.css";
 
 // test
@@ -30,7 +32,7 @@ function App() {
         <div>
           <h1>Todo Application</h1>
         </div>
-        <div>{todos ? makeTodos(todos) : null}</div>
+        <div>{todos ? formatTodoData(todos) : null}</div>
       </div>
     </div>
   );

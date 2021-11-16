@@ -1,25 +1,35 @@
+import { useEffect, useState } from "react";
+
 import logo from "./logo.svg";
 import "./App.css";
 
 // test
 
 function App() {
+  const [todos, setTodos] = useState([]);
+  useEffect(() => {
+    let retrievedTodos = getTodos();
+    retrievedTodos
+      .then((todosList) => {
+        todosList.json().then((x) => {
+          return x;
+        });
+      })
+      .then((data) => {
+        setTodos(data);
+      });
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Main code for Tell.com take home test project.</p>
       </header>
+      <div>
+        <div>
+          <h1>Todo Application</h1>
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,11 @@
+.active {
+  border: 3px dotted red;
+}
+
+.all {
+  border: 3px solid black;
+}
+
+.completed {
+  border: 3px solid grey;
+}

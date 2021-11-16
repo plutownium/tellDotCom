@@ -12,24 +12,30 @@ function App() {
 
   useEffect(() => {
     let retrievedTodos = getTodos();
-    retrievedTodos
-      .then((todosList) => {
-        todosList.json().then((x) => {
-          return x;
-        });
-      })
-      .then((data) => {
-        setTodos(data);
+    retrievedTodos.then((todosList) => {
+      todosList.json().then((todos) => {
+        console.log(todos);
+        setTodos(todos);
       });
+    });
   }, []);
 
   return (
     <div className="App">
       <div>
-        <div>
+        <div id="todoHeader">
           <h1>Todo Application</h1>
         </div>
-        <div>{todos ? formatTodoData(todos) : null}</div>
+        <div id="mainContainer">
+          <div>{todos.length ? formatTodoData(todos) : null}</div>
+        </div>
+        <button
+          onClick={() => {
+            console.log(todos);
+          }}
+        >
+          Generic Console Inspector
+        </button>
       </div>
     </div>
   );

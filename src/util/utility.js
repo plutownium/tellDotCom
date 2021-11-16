@@ -4,35 +4,38 @@ function formatTodoData(rawFormatTodos, showOnly) {
   let formattedTodos = [];
   console.log(5, rawFormatTodos, formattedTodos);
   rawFormatTodos.forEach((todo) => {
-    console.log(7, todo);
+    // console.log(7, todo);
     if (showOnly === "all") {
+      console.log("all!", todo);
       formattedTodos.push(
         <Todo
           key={todo.id}
           title={todo.title}
           userId={todo.userId}
-          todoBaz={todo.completed}
+          completed={todo.completed}
         />
       );
     } else if (showOnly === "active") {
-      if (todo.completed === "false") {
+      console.log("active!", showOnly, todo.completed);
+      if (todo.completed === false) {
         formattedTodos.push(
           <Todo
             key={todo.id}
             title={todo.title}
             userId={todo.userId}
-            todoBaz={todo.completed}
+            completed={todo.completed}
           />
         );
       }
     } else if (showOnly === "completed") {
-      if (todo.completed === "true") {
+      console.log("completed!", showOnly, todo.completed);
+      if (todo.completed === true) {
         formattedTodos.push(
           <Todo
             key={todo.id}
             title={todo.title}
             userId={todo.userId}
-            todoBaz={todo.completed}
+            completed={todo.completed}
           />
         );
       }

@@ -1,15 +1,35 @@
 .active {
 }
 
+.activityDiv {
+  height: 120px;
+}
+
 .all {
-  border: 3px solid black !important;
+  /* border: 3px solid red !important; */
   height: 100px;
-  width: 100px;
+  width: 360px;
+  margin: 0 20px 0 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 18px;
 }
 
 .all div {
-  border: 5px solid black !important;
+  border: 3px solid black !important;
+}
+
+.all * {
+  margin: 0 0 0 0;
+}
+
+.all p {
+  font-size: 16px;
+}
+
+.cardContainer {
+  height: 140px;
 }
 
 .completed {

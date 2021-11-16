@@ -9,6 +9,7 @@ import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [showOnly, setShowOnly] = useState("all");
 
   useEffect(() => {
     let retrievedTodos = getTodos();
@@ -28,7 +29,36 @@ function App() {
         </div>
         <div id="mainContainer">
           <div id="mainContainerInner">
-            <div>{todos.length ? formatTodoData(todos) : null}</div>
+            <div>{todos.length ? formatTodoData(todos, showOnly) : null}</div>
+          </div>
+          <div id="mainContainerButtons">
+            <div className="buttonDiv">
+              <button
+                onClick={() => {
+                  setShowOnly("all");
+                }}
+              >
+                All
+              </button>
+            </div>
+            <div className="buttonDiv">
+              <button
+                onClick={() => {
+                  setShowOnly("active");
+                }}
+              >
+                Active
+              </button>
+            </div>
+            <div className="buttonDiv">
+              <button
+                onClick={() => {
+                  setShowOnly("completed");
+                }}
+              >
+                Completed
+              </button>
+            </div>
           </div>
         </div>
         <button

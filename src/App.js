@@ -25,9 +25,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Main code for Tell.com take home test project.</p>
-      </header>
       <div>
         <div>
           <h1>Todo Application</h1>

@@ -7,6 +7,7 @@ import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
+
   useEffect(() => {
     let retrievedTodos = getTodos();
     retrievedTodos
@@ -19,6 +20,7 @@ function App() {
         setTodos(data);
       });
   }, []);
+
   return (
     <div className="App">
       <header className="App-header">

@@ -61,13 +61,6 @@ function App() {
             </div>
           </div>
         </div>
-        <button
-          onClick={() => {
-            console.log(todos);
-          }}
-        >
-          Generic Console Inspector
-        </button>
       </div>
     </div>
   );

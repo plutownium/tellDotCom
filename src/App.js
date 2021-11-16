@@ -30,7 +30,7 @@ function App() {
         <div>
           <h1>Todo Application</h1>
         </div>
-        <div></div>
+        <div>{todos ? makeTodos(todos) : null}</div>
       </div>
     </div>
   );

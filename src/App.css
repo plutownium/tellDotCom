@@ -4,9 +4,17 @@ h1 {
 }
 
 #mainContainer {
-  height: 100%;
+  height: 400px;
   width: 100%;
-  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+#mainContainerInner {
+  max-width: 50%;
+  border: 5px solid green;
+  display: flex;
+  justify-content: center;
 }
 
 #todoHeader {

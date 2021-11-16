@@ -27,7 +27,9 @@ function App() {
           <h1>Todo Application</h1>
         </div>
         <div id="mainContainer">
-          <div>{todos.length ? formatTodoData(todos) : null}</div>
+          <div id="mainContainerInner">
+            <div>{todos.length ? formatTodoData(todos) : null}</div>
+          </div>
         </div>
         <button
           onClick={() => {

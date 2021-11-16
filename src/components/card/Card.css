@@ -1,9 +1,15 @@
 .active {
-  border: 3px dotted red;
 }
 
 .all {
-  border: 3px solid black;
+  border: 3px solid black !important;
+  height: 100px;
+  width: 100px;
+  display: flex;
+}
+
+.all div {
+  border: 5px solid black !important;
 }
 
 .completed {
